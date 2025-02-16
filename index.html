@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Tailwind Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card-container {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .image-zoom {
+        transition: transform 0.3s ease;
+      }
+
+      .card-hover:hover .image-zoom {
+        transform: scale(1.05);
+      }
+
+      .tag-bounce {
+        transition: transform 0.2s ease;
+      }
+
+      .card-hover:hover .tag-bounce {
+        transform: translateY(-3px);
+      }
+
+      .shadow-dot {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover .shadow-dot {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-900">
+    <div class="flex flex-wrap justify-center gap-6 p-6">
+      <!-- Card 1 -->
+      <div class="card-container">
+        <div
+          class="relative w-80 h-[400px] flex flex-col justify-between card-hover"
+        >
+          <div
+            class="relative w-full h-[240px] rounded-lg bg-cover bg-center overflow-hidden"
+            style="
+              background-image: url('https://res.cloudinary.com/saylani-welfare/image/upload/v1676274365/website-images/dynamic/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg');
+            "
+          >
+            <div
+              class="image-zoom absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://res.cloudinary.com/saylani-welfare/image/upload/v1676274365/website-images/dynamic/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg');
+              "
+            ></div>
+            <div
+              class="shadow-dot absolute bottom-0 right-1/2 w-5 h-5 bg-transparent rounded-full shadow-[10px_10px_0px_#222]"
+            ></div>
+            <div
+              class="shadow-dot absolute right-0 bottom-[70px] w-5 h-5 bg-transparent rounded-full shadow-[10px_10px_0px_#222]"
+            ></div>
+          </div>
+          <div
+            class="relative w-full h-[150px] bg-white rounded-lg rounded-tr-none shadow-lg"
+          >
+            <div
+              class="absolute top-[-80px] right-0 w-1/2 h-20 bg-white border-t-[10px] border-l-[10px] border-gray-900 rounded-tl-2xl"
+            >
+              <div
+                class="absolute right-0 w-6 h-6 bg-transparent rounded-full shadow-[10px_-10px_0px_#222]"
+              ></div>
+              <div
+                class="absolute bottom-0 left-[-25px] w-6 h-6 bg-transparent rounded-full shadow-[10px_10px_0px_#fff]"
+              ></div>
+              <span
+                class="tag-bounce block px-4 py-2 mt-4 ml-3 text-sm font-semibold text-white bg-gray-900 rounded-lg"
+                >Daily Food</span
+              >
+            </div>
+            <div
+              class="flex flex-col items-center justify-center h-full text-center text-gray-900 px-4"
+            >
+              <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet</h3>
+              <p class="text-sm text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid similique voluptas autem odio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-container" style="animation-delay: 0.2s">
+        <div
+          class="relative w-80 h-[400px] flex flex-col justify-between card-hover"
+        >
+          <div
+            class="relative w-full h-[240px] rounded-lg bg-cover bg-center overflow-hidden"
+            style="
+              background-image: url('https://res.cloudinary.com/saylani-welfare/image/upload/v1678691645/website-images/dynamic/8517e89c-e41d-4868-8c92-3bbc0d1f9339.jpg');
+            "
+          >
+            <div
+              class="image-zoom absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://res.cloudinary.com/saylani-welfare/image/upload/v1678691645/website-images/dynamic/8517e89c-e41d-4868-8c92-3bbc0d1f9339.jpg');
+              "
+            ></div>
+            <div
+              class="shadow-dot absolute bottom-0 right-1/2 w-5 h-5 bg-transparent rounded-full shadow-[10px_10px_0px_#222]"
+            ></div>
+            <div
+              class="shadow-dot absolute right-0 bottom-[70px] w-5 h-5 bg-transparent rounded-full shadow-[10px_10px_0px_#222]"
+            ></div>
+          </div>
+          <div
+            class="relative w-full h-[150px] bg-white rounded-lg rounded-tr-none shadow-lg"
+          >
+            <div
+              class="absolute top-[-80px] right-0 w-1/2 h-20 bg-white border-t-[10px] border-l-[10px] border-gray-900 rounded-tl-2xl"
+            >
+              <div
+                class="absolute right-0 w-6 h-6 bg-transparent rounded-full shadow-[10px_-10px_0px_#222]"
+              ></div>
+              <div
+                class="absolute bottom-0 left-[-25px] w-6 h-6 bg-transparent rounded-full shadow-[10px_10px_0px_#fff]"
+              ></div>
+              <span
+                class="tag-bounce block px-5 py-2 mt-4 ml-3 text-sm font-semibold text-white bg-gray-900 rounded-lg"
+                >Zakat</span
+              >
+            </div>
+            <div
+              class="flex flex-col items-center justify-center h-full text-center text-gray-900 px-4"
+            >
+              <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet</h3>
+              <p class="text-sm text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid similique voluptas autem odio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-container" style="animation-delay: 0.4s">
+        <div
+          class="relative w-80 h-[400px] flex flex-col justify-between card-hover"
+        >
+          <div
+            class="relative w-full h-[240px] rounded-lg bg-cover bg-center overflow-hidden"
+            style="
+              background-image: url('https://res.cloudinary.com/saylani-welfare/image/upload/v1654923364/website-images/dynamic/c6fdf6af-51d5-4388-97ef-6cf10eb73aca.jpg');
+            "
+          >
+            <div
+              class="image-zoom absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://res.cloudinary.com/saylani-welfare/image/upload/v1654923364/website-images/dynamic/c6fdf6af-51d5-4388-97ef-6cf10eb73aca.jpg');
+              "
+            ></div>
+            <div
+              class="shadow-dot absolute bottom-0 right-1/2 w-5 h-5 bg-transparent rounded-full shadow-[10px_10px_0px_#222]"
+            ></div>
+            <div
+              class="shadow-dot absolute right-0 bottom-[70px] w-5 h-5 bg-transparent rounded-full shadow-[10px_10px_0px_#222]"
+            ></div>
+          </div>
+          <div
+            class="relative w-full h-[150px] bg-white rounded-lg rounded-tr-none shadow-lg"
+          >
+            <div
+              class="absolute top-[-80px] right-0 w-1/2 h-20 bg-white border-t-[10px] border-l-[10px] border-gray-900 rounded-tl-2xl"
+            >
+              <div
+                class="absolute right-0 w-6 h-6 bg-transparent rounded-full shadow-[10px_-10px_0px_#222]"
+              ></div>
+              <div
+                class="absolute bottom-0 left-[-25px] w-6 h-6 bg-transparent rounded-full shadow-[10px_10px_0px_#fff]"
+              ></div>
+              <span
+                class="tag-bounce block px-5 py-2 mt-4 ml-3 text-sm font-semibold text-white bg-gray-900 rounded-lg"
+                >IT Entrepreneurship Courses</span
+              >
+            </div>
+            <div
+              class="flex flex-col items-center justify-center h-full text-center text-gray-900 px-4"
+            >
+              <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet</h3>
+              <p class="text-sm text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid similique voluptas autem odio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
